@@ -1,0 +1,63 @@
+
+
+
+ .grocery-input {
+   flex-grow: 1;
+   border: 2px solid #ccc;
+   border-radius: 5px;
+   padding: 10px;
+   font-size: 15px;
+   margin-right: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #f9f9f9;
+   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+ }
+ 
+
+.add-button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.grocery-item {
+  border: 1px solid #bdc3c7; /* lighter shade of grey */
+  background-color: #fff; /* white background */
+  margin-top: 1px; /* Prevent double borders */
+  padding: 12px;
+  text-decoration: none;
+  font-size: 14px;
+  color: black;
+  display: block;
+  position: relative;
+  text-align: center;
+}
+
+
+.item-text {
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+
+.delete-button {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
