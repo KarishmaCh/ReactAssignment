@@ -5,7 +5,7 @@ import { Product } from "./products";
 
 // Import Bootstrap CSS and components
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Navbar, Container } from 'react-bootstrap';
+import { Navbar, Container, Modal, Button } from 'react-bootstrap';
 
 const initialProducts: Product[] = [
   {
@@ -78,7 +78,19 @@ const App: React.FC = () => {
 
           </div>
         </div>
-        {showModal && <ProductForm onSave={handleSaveClick} />}
+        <Modal show={showModal} onHide={() => setShowModal(false)}>
+          <Modal.Header closeButton>
+            <Modal.Title>Add Product</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <ProductForm onSave={handleSaveClick} />
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={() => setShowModal(false)}>
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
       </div>
     </div>
   );
