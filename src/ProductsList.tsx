@@ -28,9 +28,9 @@ const ProductsList: React.FC<Props> = ({ products }) => {
     setSortOrder(sortOrder === "asc" ? "desc" : "asc"); // toggle sort order
   };;
 
-  const filteredProducts = sortedProducts.filter((product) =>
-    product.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filteredProducts = products.filter((product) =>
+  product.name.toLowerCase().includes(searchTerm.toLowerCase())
+);
 
   return (
     <div className="button-bar">
@@ -57,7 +57,7 @@ const ProductsList: React.FC<Props> = ({ products }) => {
             </tr>
           </thead>
           <tbody>
-            {products.sort((a, b) =>
+            {filteredProducts.sort((a, b) =>
               sortOrder === "asc" ? a.name.localeCompare(b.name) : b.name.localeCompare(a.name)
             ).map((product) => (
               <tr key={product.id}>
