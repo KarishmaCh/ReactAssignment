@@ -26,7 +26,7 @@
 /* Add styles for LeftSideBar component */
 .fixed-left {
   position: fixed;
-  top: 60px;
+  top: 70px;
   bottom: 0;
   left: 0;
   z-index: 99;
